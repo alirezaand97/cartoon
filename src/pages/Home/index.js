@@ -8,9 +8,10 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const videos = appState.videosList;
-  // useEffect(() => {
-  //   dispatch(getVideosList());
-  // }, []);
+
+  useEffect(() => {
+    dispatch(getVideosList());
+  }, []);
 
   return <>{videos && <VideosSlider videos={videos} />}</>;
 };
