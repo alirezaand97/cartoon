@@ -6,12 +6,10 @@ import endpoints from "./endpoints";
 function* getVideosList({ data }) {
   try {
     let videos = yield Api.Get(endpoints.getVideos);
-    console.log('here')
 
-    console.log(videos);
     yield put({
       type: types.GET_VIDEOS_LIST,
-      data,
+      data:videos,
     });
   } catch (error) {
     console.log(error)
