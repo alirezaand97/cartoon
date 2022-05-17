@@ -225,7 +225,7 @@ const initialState = {
 };
 export default function Reducer(state = initialState, action) {
   switch (action.type) {
-    case types.GET_VIDEOS_LIST:
+    case types.GET_VIDEOS_LIST_SUCCESS:
       return { ...state, videosList: action.data };
     default:
       return state;
